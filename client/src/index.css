@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+}
+
+.delete-btn {
+	background-color: rgb(175, 37, 37);
+	color: rgb(219, 216, 216);
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid white;
+}
+
+.delete-btn:hover {
+	background-color: rgb(203, 67, 67);
+	color: rgb(246, 246, 246);
+}
