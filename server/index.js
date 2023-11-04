@@ -58,6 +58,16 @@ app.put('/api/markers/:id', async (req, res) => {
 	}
 });
 
+app.delete('/api/markers/:id', async (req, res) => {
+	const id = req.params.id;
+	try {
+		const deletedMarker = await Marker.findByIdAndDelete(id);
+		res.status(200).send(deletedMarker);
+	} catch (error) {
+		res.status(404).json({ error: error });
+	}
+});
+
 const port = 3001;
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}`);
